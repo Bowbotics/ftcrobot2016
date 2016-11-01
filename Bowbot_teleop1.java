@@ -113,13 +113,14 @@ public class Bowbot_teleop1 extends LinearOpMode {
            // robot.Le.setPosition(robot.MID_SERVO + clawOffset);//
             //robot.rightClaw.setPosition(robot.MID_SERVO - clawOffset);//
 
-            // Use gamepad buttons to move arm up (Y) and down (A)
-            if (gamepad1.y){
-                robot.Sweeper_Motor.setPower(1.0);
-            }
-            else if (gamepad1.a){
-                robot.Sweeper_Motor.setPower(0.0);
-            }
+
+
+
+             //Sweeper works
+            if(gamepad1.y)
+                robot.Sweeper_Motor.setPower(-1);
+            else if(gamepad1.a)
+                robot.Sweeper_Motor.setPower(0);
 
 
 
