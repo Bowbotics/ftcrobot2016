@@ -27,6 +27,8 @@ public class HardwareBowbot
     public DcMotor  Left_Drive   = null;
     public DcMotor  Right_Drive  = null;
     public DcMotor  Sweeper_Motor    = null;
+    public DcMotor  Launcher_Motor   = null;
+
   //  public Servo    buttonpusher    = null;//
 
 
@@ -52,6 +54,7 @@ public class HardwareBowbot
         Left_Drive   = hwMap.dcMotor.get("Left_Drive");
         Right_Drive  = hwMap.dcMotor.get("Right_Drive");
         Sweeper_Motor    = hwMap.dcMotor.get("Sweeper_Motor");
+        Launcher_Motor  = hwMap.dcMotor.get("Launcher_Motor");
         Left_Drive.setDirection(DcMotor.Direction.FORWARD); // Set to REVERSE if using AndyMark motors
         Right_Drive.setDirection(DcMotor.Direction.REVERSE);// Set to FORWARD if using AndyMark motors
 
@@ -65,6 +68,7 @@ public class HardwareBowbot
         Left_Drive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         Right_Drive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         Sweeper_Motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        Launcher_Motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
         // Define and initialize ALL installed servos.
        // buttonpusher = hwMap.servo.get(buttonpusher);//

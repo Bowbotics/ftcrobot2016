@@ -112,8 +112,11 @@ public class Bowbot_teleop1 extends LinearOpMode {
            // clawOffset = Range.clip(clawOffset, -0.5, 0.5);
            // robot.Le.setPosition(robot.MID_SERVO + clawOffset);//
             //robot.rightClaw.setPosition(robot.MID_SERVO - clawOffset);//
-
-
+            //launcher should work
+            if (gamepad1.x)
+                robot.Launcher_Motor.setPower(1);
+            else if (gamepad1.b)
+                robot.Launcher_Motor.setPower(0);
 
 
              //Sweeper works
